@@ -131,7 +131,11 @@ bouton, nous allons mettre à jour la variable city avec la valeur de l'input.
 ```
 
 Pour le moment, la fonction handleChange n'existe pas. Nous allons la créer. 
-La fonction handleChange va mettre à jour la variable city avec la valeur de l'input.
+La fonction handleChange va mettre à jour la variable city avec la valeur de l'input
+en utilisant la fonction setCity. 
+
+Souvenez-vous que la fonction setCity est une fonction
+que nous avons déclarée avec useState.
 
 ```javascript
 const handleChange = (event) => {
@@ -189,3 +193,35 @@ Nous allons maintenant afficher les données de la variable weather dans la page
     <p>No weather data</p>
 )}
 ```
+
+Maintenant, lorsque l'utilisateur tape quelque chose dans l'input et clique sur 
+le bouton, nous allons afficher la température et l'humidité de la ville dans la page.
+
+## 4/ Ajout d'une image
+
+Nous allons maintenant ajouter une image en fonction du temps qu'il fait dans la ville.
+
+Pour cela, nous allons utiliser la variable weather.weather[0].main qui contient 
+le temps qu'il fait dans la ville.
+
+```javascript
+{weather.main ? (
+    <div>
+        <p>La température à {city} est de {temperature.toFixed(2)}°C</p>
+        <p>Humidity: {weather.main.humidity}</p>
+        <img src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`} alt="weather icon" />
+    </div>
+) : (
+    <p>No weather data</p>
+)}
+```
+
+Nous avons maintenant une application qui affiche la température, l'humidité et un visuel
+du temps qu'il fait dans la ville.
+
+## BONUS
+
+Si vous avez le temps, vous pouvez ajouter un input pour choisir l'unité de mesure 
+(°C ou °F) et ajouter un input pour choisir le pays.
+
+Vous pouvez aussi donner un style à votre application.

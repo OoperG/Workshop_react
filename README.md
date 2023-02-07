@@ -5,11 +5,13 @@
 Le but de ce workshop est de vous faire découvrir React, une bibliothèque JavaScript 
 populaire utilisée pour construire des interfaces utilisateur interactives.
 
-Nous allons voir comment créer un projet React et comment le lancer.
+- Nous allons voir comment créer un projet React et comment le lancer.
 
-Comment utiliser les composants React pour créer des pages et des applications complexes.
+- Comment créer un formulaire avec un input et un bouton.
 
-Comment faire des requêtes HTTP avec React en utilisant Fetch.
+- Comment utiliser le hook useState pour gérer l'état local d'un composant.
+
+- Comment faire des requêtes HTTP avec React en utilisant Fetch. (oui j'aime pas axios)
 
 ## React ?
 
@@ -169,6 +171,8 @@ const handleSubmit = event => {
         });
 };
 ```
+
+Dans la requête HTTP, n'oublier pas de remplacer YOUR_API_KEY par votre clé API !
 
 N'oublier de créer la variable weather et la fonction setWeather comme pour la variable city.
 
